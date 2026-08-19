@@ -15,7 +15,7 @@ from http.server import BaseHTTPRequestHandler
 import requests
 
 GROQ_URL = "https://api.groq.com/openai/v1/chat/completions"
-GROQ_MODEL = "llama-3.3-70b-versatile"
+GROQ_MODEL = "openai/gpt-oss-120b"
 REQUEST_TIMEOUT_SEC = 12
 
 # 실제 범인은 서버 코드에만 존재한다 (프론트로 절대 전달되지 않음)
