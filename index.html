@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>붉은 서재의 비밀 | 사건번호 24-0917</title>
+<meta name="description" content="AI 용의자를 직접 심문하고 증거를 모아 진범을 지목하는 추리 웹게임" />
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🔍</text></svg>" />
+<link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+<div class="spotlight"></div>
+
+<header class="nav">
+  <a href="index.html" class="nav__brand">
+    <span class="mono badge-num">CASE #24-0917</span>&nbsp;붉은 서재의 비밀
+  </a>
+  <button class="nav__toggle" aria-label="메뉴 열기" aria-expanded="false">
+    <span></span><span></span><span></span>
+  </button>
+  <ul class="nav__links">
+    <li><a href="index.html" aria-current="page">사건 개요</a></li>
+    <li><a href="case.html">사건 현장 · 심문</a></li>
+    <li><a href="verdict.html">최종 추리 제출</a></li>
+    <li><a href="how-to.html">게임 설명서</a></li>
+  </ul>
+</header>
+
+<main>
+  <section class="hero">
+    <div class="container hero__grid">
+      <div>
+        <p class="hero__eyebrow">MIDNIGHT INVESTIGATION FILE</p>
+        <h1 data-reveal>서재에 남은 건<br />거짓말과 <em>진흙 발자국</em> 뿐이었다</h1>
+        <p class="lead" data-reveal>골동품 수집가 한서준이 자정 무렵 자택 서재에서 숨진 채 발견됐다. 용의자는 넷, 증거는 다섯. AI로 구현된 용의자들을 직접 심문하고, 흩어진 단서를 모아 진범을 지목하라.</p>
+        <div class="hero__actions" data-reveal>
+          <a href="case.html" class="btn">수사 시작하기 →</a>
+          <a href="#briefing" class="btn btn--ghost">사건 개요 보기</a>
+        </div>
+        <div class="hero__facts" data-reveal>
+          <div class="hero__fact"><b>4</b><span>용의자</span></div>
+          <div class="hero__fact"><b>5</b><span>핵심 증거</span></div>
+          <div class="hero__fact"><b>23:47</b><span>추정 사망 시각</span></div>
+        </div>
+      </div>
+
+      <div class="corkboard" aria-hidden="true">
+        <svg></svg>
+        <div class="pin-card pc-1"><b>이문영</b>집사 · 30년 근무<br />"주방에 있었습니다."</div>
+        <div class="pin-card pc-2"><b>강태오</b>조카 · 상속인<br />"방에서 게임했어요."</div>
+        <div class="pin-card pc-3"><b>박선희</b>골동품 감정사<br />오후 3시 방문 기록</div>
+        <div class="pin-card pc-4"><b>김도윤</b>정원사<br />최근 해고 통보</div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="briefing">
+    <div class="container">
+      <div class="section__head" data-reveal>
+        <p class="section__eyebrow">Case Briefing</p>
+        <h2>사건 개요</h2>
+        <p>1899년산 회중시계 골동품 컬렉션으로 유명한 한서준(62)이 자택 서재 벽난로 앞에서 쓰러진 채 발견되었다. 문은 안에서 잠겨 있었고, 창문 근처 바닥에는 정원 흙과 일치하는 진흙 발자국이 남아 있었다. 사망 추정 시각은 회중시계가 멈춘 23시 47분. 그 시각, 저택에는 네 사람이 있었다 — 혹은, 있었다고 주장한다.</p>
+      </div>
+
+      <div class="grid grid--3">
+        <div class="card" data-reveal>
+          <svg class="card__icon" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2"><circle cx="21" cy="21" r="13"/><line x1="30" y1="30" x2="42" y2="42"/></svg>
+          <p class="card__tag">STEP 01</p>
+          <h3>증거 수집</h3>
+          <p>서재 곳곳에 남겨진 5가지 물증을 확인하고 각 증거가 누구를 가리키는지 추리해 보세요.</p>
+        </div>
+        <div class="card" data-reveal>
+          <svg class="card__icon" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2"><rect x="8" y="12" width="32" height="24" rx="2"/><path d="M8 16l16 12 16-12"/></svg>
+          <p class="card__tag">STEP 02</p>
+          <h3>AI 용의자 심문</h3>
+          <p>4명의 용의자는 각각 AI로 구현되어 있습니다. 원하는 질문을 던지고, 말이 엇갈리는 지점을 찾아내세요.</p>
+        </div>
+        <div class="card" data-reveal>
+          <svg class="card__icon" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2"><path d="M24 4l6 12 13 2-9.5 9 2 13L24 34l-11.5 6 2-13L5 15l13-2z"/></svg>
+          <p class="card__tag">STEP 03</p>
+          <h3>최종 추리 제출</h3>
+          <p>범인·흉기·동기를 최종 선택하면 AI 수사 지휘관이 당신의 추리를 채점하고 사건 전말을 알려줍니다.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--alt">
+    <div class="container">
+      <div class="section__head" data-reveal>
+        <p class="section__eyebrow">Evidence Preview</p>
+        <h2>발견된 5가지 물증</h2>
+      </div>
+      <div class="grid grid--4">
+        <div class="card" data-reveal><p class="card__tag">EV-01</p><h3>깨진 회중시계</h3><p>11:47분에 멈춰 있었다.</p></div>
+        <div class="card" data-reveal><p class="card__tag">EV-02</p><h3>진흙 발자국</h3><p>정원 흙 성분과 일치.</p></div>
+        <div class="card" data-reveal><p class="card__tag">EV-03</p><h3>위조 감정서</h3><p>도장이 미세하게 어긋나 있다.</p></div>
+        <div class="card" data-reveal><p class="card__tag">EV-04</p><h3>유언장 초안</h3><p>상속 비율이 최근 수정됐다.</p></div>
+      </div>
+      <div style="margin-top:32px; text-align:center;" data-reveal>
+        <a href="case.html" class="btn">사건 현장으로 이동 →</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <p>CASE #24-0917 · 붉은 서재의 비밀 — AI 인터랙티브 추리 게임 · Made with HTML / CSS / JS + Vercel Serverless</p>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>

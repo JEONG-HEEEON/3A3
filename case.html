@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>사건 현장 · 심문 | 붉은 서재의 비밀</title>
+<link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+<div class="spotlight"></div>
+
+<header class="nav">
+  <a href="index.html" class="nav__brand"><span class="mono badge-num">CASE #24-0917</span>&nbsp;붉은 서재의 비밀</a>
+  <button class="nav__toggle" aria-label="메뉴 열기" aria-expanded="false"><span></span><span></span><span></span></button>
+  <ul class="nav__links">
+    <li><a href="index.html">사건 개요</a></li>
+    <li><a href="case.html" aria-current="page">사건 현장 · 심문</a></li>
+    <li><a href="verdict.html">최종 추리 제출</a></li>
+    <li><a href="how-to.html">게임 설명서</a></li>
+  </ul>
+</header>
+
+<main>
+  <section class="section" style="padding-top:56px;">
+    <div class="container">
+      <p class="section__eyebrow">Evidence Board</p>
+      <h2 data-reveal>서재에 남겨진 물증</h2>
+      <p data-reveal style="max-width:64ch;">각 카드를 눌러 감식 결과를 확인하세요. 증거는 용의자의 진술과 대조할 때 의미를 가집니다.</p>
+
+      <div class="grid grid--3" id="evidenceGrid" style="margin-top:28px;">
+        <button class="card evidence-btn" data-reveal data-detail="회중시계의 유리는 정면 충격으로 깨졌으며, 초침은 23시 47분에 완전히 멈춰 있다. 이는 곧 사망 추정 시각과 일치한다. 시계 뒷면에는 &#39;S.J&#39;라는 이니셜이 새겨져 있다.">
+          <p class="card__tag">EV-01 · 벽난로 앞</p><h3>깨진 회중시계</h3><p>11:47분에 멈춘 골동품 회중시계</p>
+        </button>
+        <button class="card evidence-btn" data-reveal data-detail="창가 카펫 위에서 발견된 진흙 발자국은 저택 정원의 화단 흙 성분과 99% 일치한다. 발 크기는 270mm 전후로 추정되며, 최근 내린 비로 인해 흙이 촉촉했던 상태였다.">
+          <p class="card__tag">EV-02 · 창가</p><h3>진흙 발자국</h3><p>정원 흙과 성분이 일치하는 발자국</p>
+        </button>
+        <button class="card evidence-btn" data-reveal data-detail="박선희가 발급한 감정서 사본. 정식 인증 도장의 문양이 실제보다 0.3mm 어긋나 있어 위조 가능성이 제기된다. 감정가는 실제 가치보다 3배 부풀려져 있다.">
+          <p class="card__tag">EV-03 · 책상 서랍</p><h3>위조 의심 감정서</h3><p>도장이 미세하게 어긋난 감정서 사본</p>
+        </button>
+        <button class="card evidence-btn" data-reveal data-detail="변호사 사무실에서 도착한 유언장 초안. 사망 일주일 전, 조카 강태오의 상속 비율이 60%에서 15%로 줄어드는 방향으로 수정 요청이 접수되어 있었다.">
+          <p class="card__tag">EV-04 · 서랍 잠금장치</p><h3>수정된 유언장 초안</h3><p>상속 비율이 최근 크게 줄어든 정황</p>
+        </button>
+        <button class="card evidence-btn" data-reveal data-detail="정원 창고 열쇠 하나가 사라졌다. 창고에는 부지깽이형 도구들이 보관되어 있으며, 열쇠를 상시 소지하는 사람은 정원사뿐이다.">
+          <p class="card__tag">EV-05 · 정원 창고</p><h3>사라진 창고 열쇠</h3><p>부지깽이가 보관된 창고의 열쇠 분실</p>
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section--alt">
+    <div class="container">
+      <p class="section__eyebrow">Interrogation Room</p>
+      <h2 data-reveal>AI 용의자 심문</h2>
+      <p data-reveal style="max-width:64ch;">용의자를 선택하고 질문을 입력하면, AI가 해당 인물이 되어 실시간으로 답변합니다. 진술의 모순을 찾아보세요.</p>
+
+      <div style="display:grid; grid-template-columns:1fr 1.3fr; gap:24px; margin-top:28px;" id="interrogationLayout">
+        <div class="grid" style="grid-template-columns:1fr; gap:12px;">
+          <button class="suspect is-active" data-reveal data-name="이문영" data-role="집사 · 30년 근무" data-alibi="자정 무렵 주방에서 야식을 준비하고 있었다고 주장">
+            <span class="suspect__avatar">
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 3.5-6 8-6s8 2 8 6"/></svg>
+            </span>
+            <span>
+              <span class="suspect__name">이문영</span><br />
+              <span class="suspect__role">집사 · 30년 근무</span>
+              <span class="suspect__alibi">"주방에서 야식을 준비하고 있었습니다."</span>
+            </span>
+          </button>
+          <button class="suspect" data-reveal data-name="강태오" data-role="조카 · 유일한 상속인" data-alibi="자신의 방에서 게임을 하고 있었다고 주장, 최근 유산 문제로 다툼">
+            <span class="suspect__avatar"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 3.5-6 8-6s8 2 8 6"/></svg></span>
+            <span><span class="suspect__name">강태오</span><br /><span class="suspect__role">조카 · 유일한 상속인</span><span class="suspect__alibi">"제 방에서 게임하고 있었어요."</span></span>
+          </button>
+          <button class="suspect" data-reveal data-name="박선희" data-role="골동품 감정사" data-alibi="오후 3시 방문 후 5시에 떠났다고 주장, 감정서 위조 의혹">
+            <span class="suspect__avatar"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 3.5-6 8-6s8 2 8 6"/></svg></span>
+            <span><span class="suspect__name">박선희</span><br /><span class="suspect__role">골동품 감정사</span><span class="suspect__alibi">"오후 5시에는 이미 떠났습니다."</span></span>
+          </button>
+          <button class="suspect" data-reveal data-name="김도윤" data-role="정원사" data-alibi="최근 해고 통보를 받았으며 그날 밤 자택에 있었다고 주장">
+            <span class="suspect__avatar"><svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 3.5-6 8-6s8 2 8 6"/></svg></span>
+            <span><span class="suspect__name">김도윤</span><br /><span class="suspect__role">정원사</span><span class="suspect__alibi">"그 시간엔 이미 집에 있었습니다."</span></span>
+          </button>
+        </div>
+
+        <div class="interrogation" data-reveal>
+          <div class="interrogation__head">
+            <span class="suspect__avatar"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 3.5-6 8-6s8 2 8 6"/></svg></span>
+            <div>
+              <div class="suspect__name" id="activeSuspectName">이문영</div>
+              <div class="suspect__role" id="activeSuspectRole">집사 · 30년 근무</div>
+            </div>
+          </div>
+          <div class="interrogation__log" id="chatLog">
+            <div class="msg msg--system">심문을 시작합니다. 용의자에게 질문을 입력해 보세요. (예: "그날 밤 서재 근처에 간 적 있나요?")</div>
+          </div>
+          <form class="interrogation__form" id="chatForm">
+            <input type="text" id="chatInput" placeholder="용의자에게 질문을 입력하세요…" maxlength="200" autocomplete="off" />
+            <button type="submit" class="btn" id="chatSubmit">질문</button>
+          </form>
+        </div>
+      </div>
+
+      <div style="margin-top:40px; text-align:center;" data-reveal>
+        <a href="verdict.html" class="btn btn--danger">충분히 심문했다 → 최종 추리 제출</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<!-- 증거 상세 모달 -->
+<div id="evidenceModal" style="position:fixed; inset:0; z-index:200; display:none; align-items:center; justify-content:center; padding:20px; background:rgba(11,14,20,0.85);">
+  <div class="card" style="max-width:480px; width:100%; background:var(--case-2);">
+    <p class="card__tag" id="modalTag">EV-01</p>
+    <h3 id="modalTitle">증거</h3>
+    <p id="modalDetail"></p>
+    <button class="btn btn--ghost btn--block" id="modalClose">닫기</button>
+  </div>
+</div>
+
+<footer class="footer">
+  <p>CASE #24-0917 · 붉은 서재의 비밀 — 심문 내용은 매 요청마다 AI가 실시간으로 생성합니다.</p>
+</footer>
+
+<script src="js/main.js"></script>
+<script src="js/case.js"></script>
+</body>
+</html>

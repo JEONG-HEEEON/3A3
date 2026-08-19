@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>최종 추리 제출 | 붉은 서재의 비밀</title>
+<link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+<div class="spotlight"></div>
+
+<header class="nav">
+  <a href="index.html" class="nav__brand"><span class="mono badge-num">CASE #24-0917</span>&nbsp;붉은 서재의 비밀</a>
+  <button class="nav__toggle" aria-label="메뉴 열기" aria-expanded="false"><span></span><span></span><span></span></button>
+  <ul class="nav__links">
+    <li><a href="index.html">사건 개요</a></li>
+    <li><a href="case.html">사건 현장 · 심문</a></li>
+    <li><a href="verdict.html" aria-current="page">최종 추리 제출</a></li>
+    <li><a href="how-to.html">게임 설명서</a></li>
+  </ul>
+</header>
+
+<main>
+  <section class="section" style="padding-top:56px;">
+    <div class="container" style="max-width:760px;">
+      <p class="section__eyebrow">Final Verdict</p>
+      <h2 data-reveal>진범을 지목하라</h2>
+      <p data-reveal style="max-width:60ch;">지금까지 모은 증거와 심문 내용을 토대로 범인, 흉기, 동기를 선택하고 추리 근거를 적어주세요. 제출하면 AI 수사 지휘관이 즉시 채점하고 사건의 전말을 알려줍니다.</p>
+
+      <form class="form-block" id="verdictForm" data-reveal>
+        <div class="field">
+          <label>범인은 누구인가?</label>
+          <div class="radio-row">
+            <label><input type="radio" name="culprit" value="이문영" required /> 이문영 (집사)</label>
+            <label><input type="radio" name="culprit" value="강태오" /> 강태오 (조카)</label>
+            <label><input type="radio" name="culprit" value="박선희" /> 박선희 (감정사)</label>
+            <label><input type="radio" name="culprit" value="김도윤" /> 김도윤 (정원사)</label>
+          </div>
+        </div>
+
+        <div class="field">
+          <label for="weapon">흉기는 무엇인가?</label>
+          <select id="weapon" name="weapon" required>
+            <option value="">— 선택하세요 —</option>
+            <option value="부지깽이">벽난로 부지깽이</option>
+            <option value="독약">독약</option>
+            <option value="촛대">청동 촛대</option>
+            <option value="맨손">둔기가 아닌 몸싸움</option>
+          </select>
+        </div>
+
+        <div class="field">
+          <label for="motive">동기는 무엇인가?</label>
+          <select id="motive" name="motive" required>
+            <option value="">— 선택하세요 —</option>
+            <option value="복수">해고·모욕에 대한 복수</option>
+            <option value="상속">유산 상속 문제</option>
+            <option value="은폐">위조 사실 은폐</option>
+            <option value="우발">우발적 다툼</option>
+          </select>
+        </div>
+
+        <div class="field">
+          <label for="reasoning">추리 근거 (선택 사항이지만, 적을수록 AI 피드백이 정교해집니다)</label>
+          <textarea id="reasoning" name="reasoning" rows="4" maxlength="500" placeholder="예: 진흙 발자국이 정원 흙과 일치하고, 정원사만 창고 열쇠를 가지고 있었으며…"></textarea>
+          <p class="field__hint" id="reasoningCount">0 / 500자</p>
+        </div>
+
+        <button type="submit" class="btn btn--danger btn--block" id="submitBtn">
+          <span id="submitLabel">추리 제출하기</span>
+        </button>
+      </form>
+
+      <div class="verdict-result" id="verdictResult">
+        <h3 id="resultTitle"></h3>
+        <p id="resultFeedback" style="white-space:pre-line;"></p>
+        <a href="case.html" class="btn btn--ghost" style="margin-top:12px;">다시 심문하러 가기</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <p>CASE #24-0917 · 붉은 서재의 비밀 — 채점 기준과 정답은 서버(api/verdict.py)에서만 관리됩니다.</p>
+</footer>
+
+<script src="js/main.js"></script>
+<script src="js/verdict.js"></script>
+</body>
+</html>

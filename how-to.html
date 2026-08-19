@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>게임 설명서 | 붉은 서재의 비밀</title>
+<link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+<div class="spotlight"></div>
+
+<header class="nav">
+  <a href="index.html" class="nav__brand"><span class="mono badge-num">CASE #24-0917</span>&nbsp;붉은 서재의 비밀</a>
+  <button class="nav__toggle" aria-label="메뉴 열기" aria-expanded="false"><span></span><span></span><span></span></button>
+  <ul class="nav__links">
+    <li><a href="index.html">사건 개요</a></li>
+    <li><a href="case.html">사건 현장 · 심문</a></li>
+    <li><a href="verdict.html">최종 추리 제출</a></li>
+    <li><a href="how-to.html" aria-current="page">게임 설명서</a></li>
+  </ul>
+</header>
+
+<main>
+  <section class="hero" style="padding:72px 0 40px;">
+    <div class="container">
+      <p class="hero__eyebrow">Investigator's Handbook</p>
+      <h1 style="font-size:clamp(2rem,4.4vw,3rem);" data-reveal>어떻게 수사하나요?</h1>
+      <p class="lead" data-reveal>목표는 하나, 진범·흉기·동기를 정확히 지목하는 것입니다. 아래 4단계만 따라가면 됩니다.</p>
+    </div>
+  </section>
+
+  <section class="section" style="padding-top:0;">
+    <div class="container">
+
+      <div class="card" data-reveal style="border-color:var(--brass); margin-bottom:32px; display:flex; gap:16px; align-items:flex-start;">
+        <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" style="color:var(--brass); flex:none;"><circle cx="12" cy="12" r="9"/><path d="M12 8v4l3 2"/></svg>
+        <div>
+          <p class="card__tag" style="color:var(--brass);">GOAL</p>
+          <h3 style="margin-bottom:4px;">게임 목표</h3>
+          <p style="margin:0;">증거를 확인하고 용의자 4명을 심문해서, <strong style="color:var(--parchment);">진범 · 흉기 · 동기</strong>를 정확히 지목하세요. 확신이 서면 언제든 최종 추리를 제출할 수 있습니다.</p>
+        </div>
+      </div>
+
+      <div class="grid grid--4">
+        <div class="card" data-reveal>
+          <p class="card__tag">STEP 01 · index.html</p>
+          <h3>사건 개요 확인</h3>
+          <p>첫 화면에서 사건 브리핑, 사망 추정 시각, 용의자·증거 미리보기를 읽습니다.</p>
+        </div>
+        <div class="card" data-reveal>
+          <p class="card__tag">STEP 02 · case.html</p>
+          <h3>증거 5종 확인</h3>
+          <p>증거 카드를 클릭하면 회중시계, 발자국 등 감식 결과가 모달로 열립니다.</p>
+        </div>
+        <div class="card" data-reveal>
+          <p class="card__tag">STEP 03 · case.html</p>
+          <h3>용의자 심문</h3>
+          <p>용의자를 선택하고 질문을 입력하면 AI가 그 인물이 되어 실시간으로 답합니다.</p>
+        </div>
+        <div class="card" data-reveal>
+          <p class="card__tag">STEP 04 · verdict.html</p>
+          <h3>최종 추리 제출</h3>
+          <p>범인·흉기·동기를 고르고 근거를 적으면 AI 수사 지휘관이 즉시 채점합니다.</p>
+        </div>
+      </div>
+
+      <div class="card" data-reveal style="margin-top:24px; border-color:var(--line); display:flex; gap:14px; align-items:flex-start;">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" style="color:var(--brass-2); flex:none; margin-top:2px;"><path d="M9 18h6M10 21h4M12 3a6 6 0 00-4 10.5c.6.6 1 1.4 1 2.5h6c0-1.1.4-1.9 1-2.5A6 6 0 0012 3z"/></svg>
+        <p style="margin:0; font-size:.9rem;"><strong style="color:var(--parchment);">팁.</strong> 용의자마다 최근 대화를 기억합니다. 한 인물에게 이어서 질문을 던지면 진술이 흔들리는 지점을 더 쉽게 찾을 수 있습니다. 증거 이름을 직접 언급하며 질문해 보세요. (예: "정원 창고 열쇠는 왜 사라졌나요?")</p>
+      </div>
+
+      <div style="margin-top:40px; text-align:center;" data-reveal>
+        <a href="case.html" class="btn">수사 시작하기 →</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <p>CASE #24-0917 · 붉은 서재의 비밀 — 게임 설명서</p>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>
