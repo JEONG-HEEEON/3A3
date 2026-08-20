@@ -2,7 +2,7 @@
 
 AI 용의자를 직접 심문하고, 증거를 모아 진범을 지목하는 **인터랙티브 추리 웹게임**입니다.
 
-- 배포 URL: https://detective-game-1fdxbtn78-jhgeon00-1283s-projects.vercel.app
+- 배포 URL: https://detective-game-pi.vercel.app
 - GitHub 저장소: https://github.com/JEONG-HEEEON/3A3
 
 > 참고: 위 배포 URL은 특정 배포 시점에 고정되는 형태의 주소입니다. Vercel 프로젝트의
